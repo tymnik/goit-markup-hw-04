@@ -389,6 +389,7 @@ main {
 
 .customers-icon-item {
     height: 88px;
+    width: calc((100% - 5*24) /6);
 }
 
 .customers-icon {
@@ -406,7 +407,6 @@ main {
     width: 100%;
     height: 100%;
     padding: 16px 32px;
-    width: calc((100% - 5*24) /6);
     transition: color var(--typical-transition), border-color var(--typical-transition);
 }
 
@@ -479,9 +479,9 @@ main {
     width: calc((100% - 48px) / 3);
 }
 
-.card-block:hover .portfolio-cover-block,
-.card-block:focus .portfolio-cover-block {
-    transform: translate(0);
+.card-block:hover .cover-text,
+.card-block:focus .cover-text {
+    transform: translateY(0);
 }
 
 .portfolio-info {
@@ -514,23 +514,20 @@ main {
     overflow: hidden;
 }
 
-.portfolio-cover-block {
-    position: absolute;
-    background-color: var(--brand-color);
-    top: 0;
-    left: 0;
-    padding: 40px 32px 164px;
-    height: 100%;
-    transform: translateY(100%);
-    transition: transform var(--typical-transition);
-}
-
 .cover-text {
     font-family: "Roboto", sans-serif;
     font-size: var(--font-size);
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--light-backgrounds);
+    position: absolute;
+    background-color: var(--brand-color);
+    top: 0;
+    left: 0;
+    padding: 40px 32px;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform var(--typical-transition);
 }
 
 .footer {
